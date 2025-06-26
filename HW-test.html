@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Being a GTAC STEM Coach</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+    }
+
+    /* Main content */
+    .main {
+      padding: 20px;
+      max-width: 100%;
+    }
+
+    header {
+      background: linear-gradient(to right, #fafafa, #d3d3fc);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 24px;
+      margin: 0 5px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      background-color: #e6e2ff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .quote {
+      background: #ffeb7f;
+      padding: 15px;
+      border-radius: 15px;
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    .images, .illustration {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .images img, .illustration img {
+      width: 300px;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+
+    .highlight-box {
+      background-color: #fff9ef;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      font-size: 16px;
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .highlight-box li {
+      margin-bottom: 10px;
+    }
+
+    .highlight-box strong {
+      color: #000;
+    }
+
+    /* Floating button nav */
+    .floating-nav {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+      pointer-events: none; /* prevents blocking other content unless hovered */
+    }
+
+    .floating-nav a {
+      transform: translateX(100%);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: auto;
+    }
+
+    body:hover .floating-nav a {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .nav-button {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px 0 0 25px;
+      font-weight: bold;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .btn-about     { background-color: #a02c2c; }
+    .btn-gtac      { background-color: #f28b1d; }
+    .btn-inspire   { background-color: #ffcc00; color: black; }
+    .btn-teach     { background-color: #00cc66; }
+    .btn-schedule  { background-color: #66d9e8; color: black; }
+    .btn-apply     { background-color: #c49aff; }
+    .btn-meet      { background-color: #7140da; }
+    .btn-faq       { background-color: #e6f0ff; color: black; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating hover-only buttons -->
+  <div class="floating-nav">
+    <a href="#about" class="nav-button btn-about">About the job</a>
+    <a href="#gtac" class="nav-button btn-gtac">About GTAC</a>
+    <a href="#inspire" class="nav-button btn-inspire">Inspiring Scientists</a>
+    <a href="#teach" class="nav-button btn-teach">What Coaches Teach</a>
+    <a href="#schedule" class="nav-button btn-schedule">Scheduling</a>
+    <a href="#apply" class="nav-button btn-apply">How to Apply</a>
+    <a href="#coaches" class="nav-button btn-meet">Meet Coaches</a>
+    <a href="#faq" class="nav-button btn-faq">FAQs</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <header>
+      <img src="linkedin-icon.png" alt="LinkedIn">
+      <img src="instagram-icon.png" alt="Instagram">
+      <h1>Being a GTAC STEM Coach</h1>
+      <img src="hero-image.jpg" alt="Hero Banner" style="width:100%; max-height:300px; object-fit:cover;">
+    </header>
+
+    <section id="about">
+      <div class="section-title">About the Job</div>
+      <div class="images">
+        <img src="coach-lab-1.jpg" alt="Coach Lab">
+      </div>
+      <div class="highlight-box">
+        <strong>What is a STEM Coach</strong><br>
+        STEM Coaches facilitate the learning journey of primary and secondary school students by inspiring them to careers in science through cutting-edge research technologies.
+      </div>
+      <div class="quote">
+        “This role is such a fun gig! You can work when it suits you and get out of the lab to explore science with young people. It’s the perfect job for a PhD student”
+      </div>
+      <div class="images">
+        <img src="coach-classroom.jpg" alt="Coach with students">
+      </div>
+      <div class="illustration">
+        <img src="stick-figure-coach.png" alt="Stick figure STEM coach with students">
+      </div>
+    </section>
+
+    <section id="teach">
+      <div class="section-title">What does a STEM Coach do</div>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Lead groups of 6 students</strong> in the classroom.</li>
+          <li>Help students understand and apply new scientific concepts through <strong>effective questioning and positive reinforcement</strong>.</li>
+          <li><strong>Engage students in dialogue</strong>, offering insights into STEM research and your academic journey.</li>
+        </ul>
+      </div>
+      <div class="images">
+        <img src="coach-primary.jpg" alt="Coach building switches">
+        <img src="coach-pcr.jpg" alt="Coach teaching PCR">
+      </div>
+    </section>
+
+    <section id="gtac"><div class="section-title">About GTAC</div><p>GTAC is a leading biomedical science education center supporting teachers and students.</p></section>
+
+    <section id="inspire"><div class="section-title">Inspiring the Next Generation of Scientists</div><p>Coaches act as role models for students to envision themselves as future scientists.</p></section>
+
+    <section id="schedule"><div class="section-title">Scheduling</div><p>Flexible and session-based — great for students or researchers with variable availability.</p></section>
+
+    <section id="apply"><div class="section-title">How to Apply</div><p>Visit our GTAC careers page, complete an online form, and attend an onboarding session.</p></section>
+
+    <section id="coaches"><div class="section-title">Meet Our STEM Coaches</div><p>Read stories from past and cur
