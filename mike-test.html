@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STEM Coaches</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #home { background: #f4f4f4; }
+    #about { background: #cce7ff; }
+    #services { background: #ffe3c2; }
+    #contact { background: #d4ffd4; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1 class="fade-in">Welcome to My Site</h1>
+    <p class="fade-in">Scroll down to explore more sections.</p>
+  </section>
+
+  <section id="about">
+    <h2 class="fade-in">About Us</h2>
+    <p class="fade-in">We are passionate about learning and creating web experiences.</p>
+  </section>
+
+  <section id="services">
+    <h2 class="fade-in">Our Services</h2>
+    <p class="fade-in">We build simple, beautiful, and responsive web apps.</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="fade-in">Contact</h2>
+    <p class="fade-in">Feel free to reach out to us any time.</p>
+  </section>
+
+  <script>
+    // Scroll-triggered animation
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
